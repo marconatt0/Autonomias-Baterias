@@ -60,7 +60,7 @@ def calcular_autonomia(qtd: float, ah: float, consumo: float) -> dict[int, str]:
 # Dentro de um form, apertar Enter em qualquer campo equivale a clicar em "Calcular".
 # format="%g" mostra só os dígitos (4 em vez de 4,00) e ainda aceita decimais se precisar.
 with st.form("calculadora", border=False):
-    qtd = st.number_input("Quantidade do banco", min_value=0.0, step=1.0, value=None, format="%g", placeholder="Digite a quantidade")
+    qtd = st.number_input("Quantidade de banco", min_value=0.0, step=1.0, value=None, format="%g", placeholder="Digite a quantidade")
     ah = st.number_input("A/h do banco", min_value=0.0, step=1.0, value=None, format="%g", placeholder="Digite o A/h")
     consumo = st.number_input("Consumo", min_value=0.0, step=1.0, value=None, format="%g", placeholder="Digite o Consumo")
     calcular = st.form_submit_button("Calcular", use_container_width=True)
